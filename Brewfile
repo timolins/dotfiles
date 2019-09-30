@@ -6,7 +6,6 @@ tap 'caskroom/versions'
 tap 'homebrew/bundle'
 
 # Binaries
-brew 'awscli'
 brew 'bash' # Latest Bash version
 brew 'bat' # "cat" on steroids
 brew 'coreutils' # Those that come with macOS are outdated
@@ -15,53 +14,41 @@ brew 'gnupg2'
 brew 'grep'
 brew 'httpie'
 brew 'hub'
+brew 'lazydocker'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
 brew 'zlib' # Needed for Memcached
-brew 'zsh'
 brew 'zsh-completions'
+brew 'zsh'
 
 # Development
-brew 'php'
-brew 'php@7.2'
 brew 'imagick'
-brew 'mysql'
-brew 'nginx'
 brew 'node'
-brew 'redis'
+brew 'yarn'
 
 # Apps
-cask 'aerial'
-cask 'alfred'
-cask 'caffeine'
-cask 'discord'
+cask 'arq'
+cask 'bartender'
 cask 'docker'
-cask 'dropbox'
-cask 'eid-be'
-cask 'eid-be-viewer'
+cask 'figma'
 cask 'firefox'
-cask 'github'
-cask 'google-backup-and-sync'
+cask 'flux'
 cask 'google-chrome'
-cask 'gpg-suite'
-cask 'insomnia'
-cask 'java'
-cask 'mysqlworkbench'
-cask 'phpstorm'
-cask 'sequel-pro'
-cask 'skype'
+cask 'iterm2'
+cask 'keepingyouawake'
+cask 'numi'
+cask 'paw'
+cask 'postico'
 cask 'slack'
-cask 'sublime-text'
+cask 'spotify'
 cask 'tableplus'
-cask 'there'
 cask 'tor-browser'
-cask 'transmit'
-cask 'vagrant'
-cask 'virtualbox'
 cask 'virtualbox-extension-pack'
+cask 'virtualbox'
+cask 'visual-studio-code
 
 # Quicklook
 cask 'qlcolorcode'
@@ -81,12 +68,9 @@ cask 'font-source-serif-pro'
 
 # Mac App Store
 mas '1Password', id: 1333542190
-mas 'Byword', id: 420212497
-mas 'Giphy Capture', id: 668208984
-mas 'Keynote', id: 409183694
-mas 'Sip', id: 507257563
+mas 'Affinity Designer', id: 824171161
+mas 'Affinity Photo', id: 824183456
 mas 'Spark', id: 1176895641
+mas 'Telegram', id: 747648890 
 mas 'The Unarchiver', id: 425424353
 mas 'Things', id: 904280696
-mas 'Tweetbot', id: 1384080005
-mas 'WhatsApp', id: 1147396723 

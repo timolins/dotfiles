@@ -5,7 +5,7 @@ export DOTFILES=$HOME/.dotfiles
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/driesvints/.oh-my-zsh"
+export ZSH="/Users/timolins/.oh-my-zsh"
 
 # Theme
 export MNML_INSERT_CHAR="$"
@@ -16,7 +16,7 @@ export MNML_RPROMPT=('mnml_cwd 20')
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="minimal"
+ZSH_THEME="timosh"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -106,3 +106,44 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Yarn global binaries
+PATH="$PATH:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin"
+
+# Update
+function update() { brew update && brew upgrade && brew cleanup && brew doctor; }
+
+# Serveo Tunnel
+function tunnel {
+  port=3000
+  while test $# -gt 0; do
+    case "$1" in
+      -p)
+         shift
+         port=$1
+         shift
+         ;;
+      -n)
+         shift
+         name=$1
+         shift
+         ;;
+      *)
+        echo "$1 is not a recognized flag!"
+        return 1;
+        ;;
+      esac
+  done
+
+  while true
+  do
+  if [ -n "$name" ];
+    then
+      ssh -R $name:80:localhost:$port serveo.net
+    else
+      ssh -R 80:localhost:$port serveo.net
+    fi
+    sleep 1
+  done
+}
+
