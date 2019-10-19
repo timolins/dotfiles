@@ -25,7 +25,7 @@ brew 'zsh-completions'
 brew 'zsh'
 
 # Development
-brew 'imagick'
+brew 'imagemagick'
 brew 'node'
 brew 'yarn'
 
@@ -49,7 +49,7 @@ cask 'tableplus'
 cask 'tor-browser'
 cask 'virtualbox-extension-pack'
 cask 'virtualbox'
-cask 'visual-studio-code
+cask 'visual-studio-code'
 
 # Quicklook
 cask 'qlcolorcode'

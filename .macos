@@ -32,7 +32,7 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 # Install SF Code font
-cp /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/* /Library/Fonts
+cp /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/* /Library/Fonts
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
