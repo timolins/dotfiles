@@ -1,8 +1,8 @@
 # Taps
-tap 'caskroom/cask'
-tap 'caskroom/eid'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
+tap 'homebrew/cask'
+tap 'homebrew/cask-eid'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 
 # Binaries
@@ -70,6 +70,7 @@ cask 'font-source-serif-pro'
 mas '1Password', id: 1333542190
 mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
+mas 'Bear', id: 1091189122
 mas 'Spark', id: 1176895641
 mas 'Telegram', id: 747648890 
 mas 'The Unarchiver', id: 425424353
