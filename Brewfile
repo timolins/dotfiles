@@ -47,13 +47,9 @@ cask 'slack'
 cask 'spotify'
 cask 'tableplus'
 cask 'tor-browser'
-cask 'virtualbox-extension-pack'
-cask 'virtualbox'
 cask 'visual-studio-code'
 
 # Quicklook
-cask 'qlcolorcode'
-cask 'qlmarkdown'
 cask 'quicklook-json'
 cask 'quicklook-csv'
 cask 'qlstephen'
@@ -71,8 +67,6 @@ cask 'font-source-serif-pro'
 mas '1Password', id: 1333542190
 mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
-mas 'Bear', id: 1091189122
-mas 'Spark', id: 1176895641
 mas 'Telegram', id: 747648890 
 mas 'The Unarchiver', id: 425424353
 mas 'Things', id: 904280696
