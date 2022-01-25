@@ -1,6 +1,5 @@
 # Taps
 tap 'homebrew/cask'
-tap 'homebrew/cask-eid'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
@@ -23,31 +22,48 @@ brew 'tree' # List directories in a tree structure
 brew 'zlib' # Needed for Memcached
 brew 'zsh-completions'
 brew 'zsh'
+brew 'svn'
 
 # Development
 brew 'imagemagick'
 brew 'node'
 brew 'yarn'
 
+
 # Apps
+
+## Basics
 cask 'arq'
 cask 'bartender'
-cask 'docker'
-cask 'figma'
-cask 'firefox'
-cask 'flux'
 cask 'google-chrome'
-cask 'iterm2'
-cask 'keepingyouawake'
 cask 'little-snitch'
-cask 'numi'
+cask 'flux'
+cask 'keepingyouawake'
+cask 'slack'
+cask 'mimestream'
+cask 'soulver'
+mas '1Password', id: 1333542190
+mas 'Telegram', id: 747648890 
+mas 'The Unarchiver', id: 425424353
+mas 'Things', id: 904280696
+
+## Dev
+cask 'iterm2'
+cask 'docker'
+cask 'tableplus'
+cask 'visual-studio-code'
 cask 'paw'
 cask 'postico'
-cask 'slack'
-cask 'spotify'
-cask 'tableplus'
 cask 'tor-browser'
-cask 'visual-studio-code'
+cask 'firefox'
+cask 'github'
+
+## Design
+cask 'figma'
+mas 'Affinity Designer', id: 824171161
+mas 'Affinity Photo', id: 824183456
+
+
 
 # Quicklook
 cask 'quicklook-json'
@@ -61,12 +77,3 @@ cask 'font-roboto'
 cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
-
-# Mac App Store
-mas '1Password', id: 1333542190
-mas 'Affinity Designer', id: 824171161
-mas 'Affinity Photo', id: 824183456
-mas 'Telegram', id: 747648890 
-mas 'The Unarchiver', id: 425424353
-mas 'Things', id: 904280696
