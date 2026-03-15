@@ -6,17 +6,13 @@ if ! command -v brew &>/dev/null; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-if ! command -v stow &>/dev/null; then
-  echo "Installing stow..."
-  brew install stow
-fi
-
-if ! command -v fish &>/dev/null; then
-  echo "Installing fish..."
-  brew install fish
-fi
+echo "Installing packages..."
+brew bundle --file="$(dirname "$0")/Brewfile"
 
 cd "$(dirname "$0")"
 stow */
+
+echo "Applying macOS defaults..."
+./macos/setup-macos.sh
 
 echo "Done!"
