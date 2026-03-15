@@ -12,6 +12,9 @@ brew bundle --file="$(dirname "$0")/Brewfile"
 cd "$(dirname "$0")"
 stow */
 
+echo "Installing Claude Code..."
+curl -fsSL https://claude.ai/install.sh | bash
+
 echo "Applying macOS defaults..."
 ./macos/setup-macos.sh
 
