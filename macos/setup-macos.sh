@@ -4,12 +4,9 @@
 defaults write com.apple.dock static-only -bool true
 # Dock: minimize windows into app icon
 defaults write com.apple.dock minimize-to-application -bool true
-# Dock: zero delay auto-hide
-defaults write com.apple.dock autohide -bool true
+# Dock: zero delay auto-hide (only sets speed, doesn't enable auto-hide)
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
-# Dock: wipe default pinned apps
-defaults write com.apple.dock persistent-apps -array
 
 # Finder: column view by default
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
