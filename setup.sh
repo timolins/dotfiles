@@ -18,7 +18,7 @@ fi
 echo "Installing packages..."
 brew bundle --file="$(dirname "$0")/Brewfile"
 
-stow */
+stow --adopt */
 
 echo "Installing runtimes..."
 mise install
