@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 cd "$(dirname "$0")"
 
@@ -7,6 +8,13 @@ if [ -z "$SETUP_RESTARTED" ]; then
     echo "Updated dotfiles, restarting setup..."
     SETUP_RESTARTED=1 exec "$0"
   fi
+fi
+
+if ! xcode-select -p &>/dev/null; then
+  echo "Installing Xcode Command Line Tools..."
+  xcode-select --install
+  echo "Please re-run this script after installation completes."
+  exit 1
 fi
 
 if ! command -v brew &>/dev/null; then
@@ -24,7 +32,7 @@ echo "Installing runtimes..."
 mise install
 
 echo "Linking Tailscale CLI..."
-ln -sf /Applications/Tailscale.app/Contents/MacOS/Tailscale /usr/local/bin/tailscale
+sudo ln -sf /Applications/Tailscale.app/Contents/MacOS/Tailscale /usr/local/bin/tailscale
 
 echo "Installing Claude Code..."
 curl -fsSL https://claude.ai/install.sh | bash

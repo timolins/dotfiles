@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Dock: show only open apps
-defaults write com.apple.dock static-only -bool true
 # Dock: minimize windows into app icon
 defaults write com.apple.dock minimize-to-application -bool true
 # Dock: zero delay auto-hide (only sets speed, doesn't enable auto-hide)
