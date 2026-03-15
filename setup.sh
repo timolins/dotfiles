@@ -1,7 +1,13 @@
 #!/bin/bash
 
 cd "$(dirname "$0")"
-git pull 2>/dev/null
+
+if [ -z "$SETUP_RESTARTED" ]; then
+  if git pull 2>/dev/null | grep -q "Updating"; then
+    echo "Updated dotfiles, restarting setup..."
+    SETUP_RESTARTED=1 exec "$0"
+  fi
+fi
 
 if ! command -v brew &>/dev/null; then
   echo "Installing Homebrew..."
