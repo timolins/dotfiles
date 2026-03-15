@@ -1,5 +1,8 @@
 #!/bin/bash
 
+cd "$(dirname "$0")"
+git pull 2>/dev/null
+
 if ! command -v brew &>/dev/null; then
   echo "Installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -9,8 +12,10 @@ fi
 echo "Installing packages..."
 brew bundle --file="$(dirname "$0")/Brewfile"
 
-cd "$(dirname "$0")"
 stow */
+
+echo "Installing runtimes..."
+mise install
 
 echo "Linking Tailscale CLI..."
 ln -sf /Applications/Tailscale.app/Contents/MacOS/Tailscale /usr/local/bin/tailscale
