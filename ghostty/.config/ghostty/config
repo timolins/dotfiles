@@ -1,0 +1,7 @@
+command = /opt/homebrew/bin/fish
+working-directory = /Volumes/Development
+macos-option-as-alt = true
+window-padding-x = 16
+window-padding-y = 4
+theme = light:Light Owl,dark:Hybrid
+keybind = shift+enter=text:\x1b\r
