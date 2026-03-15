@@ -12,6 +12,9 @@ brew bundle --file="$(dirname "$0")/Brewfile"
 cd "$(dirname "$0")"
 stow */
 
+echo "Linking Tailscale CLI..."
+ln -sf /Applications/Tailscale.app/Contents/MacOS/Tailscale /usr/local/bin/tailscale
+
 echo "Installing Claude Code..."
 curl -fsSL https://claude.ai/install.sh | bash
 
