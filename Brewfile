@@ -1,4 +1,5 @@
 brew "coreutils"
+brew "bun"
 brew "croc"
 brew "fish"
 brew "gh"
