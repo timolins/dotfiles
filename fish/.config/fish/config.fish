@@ -21,3 +21,6 @@ source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 # if test -n "$anthropic_auth_token"
 #     set -gx ANTHROPIC_AUTH_TOKEN $anthropic_auth_token
 # end
+
+# Prefer binaries from the nearest node_modules/.bin.
+source ~/.config/fish/conf.d/local_node_bin.fish
