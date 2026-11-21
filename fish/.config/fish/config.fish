@@ -1,16 +1,15 @@
 /opt/homebrew/bin/brew shellenv | source
 fish_add_path ~/.local/bin
 
-fish_add_path ~/Library/pnpm
 set -gx PNPM_HOME "$HOME/Library/pnpm"
+# pnpm checks PATH before creating its global bin directory.
+contains -- "$PNPM_HOME/bin" $PATH; or set -gx PATH "$PNPM_HOME/bin" $PATH
+fish_add_path "$PNPM_HOME"
 
 mise activate fish | source
 zoxide init fish --cmd y | source
 
-fish_add_path $PNPM_HOME
 fish_add_path ~/.bun/bin
-
-mise activate fish | source
 
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.

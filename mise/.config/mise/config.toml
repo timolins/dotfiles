@@ -2,6 +2,8 @@
 node = "latest"
 pnpm = "latest"
 bun = "latest"
+claude = { version = "latest", auto_update = true }
+codex = { version = "latest", auto_update = true }
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
