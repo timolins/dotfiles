@@ -18,3 +18,11 @@ Setup copies the custom bundle into your user `~/Library/Keyboard Layouts` direc
 3. Add it, then select it from the input menu. If you used **English Quertz** before, add the renamed layout again: macOS treats it as a different input source.
 
 To install just the keyboard (without rerunning setup), run `bash ~/.dotfiles/macos/install-keyboard.sh`. If it reports that a different copy of the bundle already exists, move that bundle out of `~/Library/Keyboard Layouts`, retry, and log out and back in.
+
+## Raycast dictation
+
+In **Raycast Settings → Extensions → Script Commands**, add `~/.dotfiles/raycast/scripts` as a script directory. Run **Toggle Dictation** twice to check that it starts and stops Superwhisper. Assign a hotkey in Raycast if you want one.
+
+**Toggle Dictation** tries to mute FaceTime when dictation starts and restores mute when it stops, but only if it muted the call itself. If prompted, allow Raycast Accessibility and Automation access to System Events. The script uses FaceTime’s English **Video → Mute** menu and Superwhisper’s timestamped recording folders; it skips muting if it can’t identify the recording state or read FaceTime’s mute state. Set `SUPERWHISPER_RECORDINGS_DIR` in Raycast’s environment if its configured folder can’t be detected.
+
+Test on a call where you can safely check the mute indicator. Use the same Raycast command to start and stop. If you end dictation another way, or the call changes mid-dictation, check FaceTime’s mute state manually.
