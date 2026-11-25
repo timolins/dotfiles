@@ -20,7 +20,7 @@ echo "Installing packages..."
 brew bundle --file="$PWD/Brewfile"
 
 echo "Linking dotfiles..."
-stow --target="$HOME" fish ghostty git mise
+stow --target="$HOME" fish ghostty git mise zsh
 
 bash ./macos/install-keyboard.sh
 

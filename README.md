@@ -7,7 +7,11 @@ git clone https://github.com/timolins/dotfiles ~/.dotfiles
 ~/.dotfiles/setup.sh
 ```
 
-Setup uses the current checkout without pulling updates. It installs the Brewfile apps and CLI tools, links the Fish, Ghostty, Git, and mise configs without adopting existing files, installs mise tools (including Claude Code), and applies the macOS defaults. If Stow reports an existing config, move it aside or merge it before retrying.
+Setup uses the current checkout without pulling updates. It installs the Brewfile apps and CLI tools, links the Fish, Ghostty, Git, mise, and zsh configs without adopting existing files, installs mise tools (including Claude Code), and applies the macOS defaults. If Stow reports an existing config, move it aside or merge it before retrying.
+
+## mise tools in shells
+
+Fish activates mise directly. For zsh, `~/.zshenv` adds mise’s shims to `PATH`, so tools such as Node are also available to non-interactive `zsh -c` commands. To link just the zsh config from this checkout, run `stow --target="$HOME" zsh`. This does not change `PATH` for apps that launch commands without starting zsh or Fish.
 
 ## English QWERTZ keyboard
 
