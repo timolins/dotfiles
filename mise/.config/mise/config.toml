@@ -2,6 +2,7 @@
 node = "latest"
 pnpm = "latest"
 bun = "latest"
+go = "1.27"
 claude = { version = "latest", auto_update = true }
 codex = { version = "latest", auto_update = true }
 
