@@ -30,3 +30,7 @@ In **Raycast Settings → Extensions → Script Commands**, add `~/.dotfiles/ray
 **Toggle Dictation** tries to mute FaceTime when dictation starts and restores mute when it stops, but only if it muted the call itself. If prompted, allow Raycast Accessibility and Automation access to System Events. The script uses FaceTime’s English **Video → Mute** menu and Superwhisper’s timestamped recording folders; it skips muting if it can’t identify the recording state or read FaceTime’s mute state. Set `SUPERWHISPER_RECORDINGS_DIR` in Raycast’s environment if its configured folder can’t be detected.
 
 Test on a call where you can safely check the mute indicator. Use the same Raycast command to start and stop. If you end dictation another way, or the call changes mid-dictation, check FaceTime’s mute state manually.
+
+## Raycast FaceTime mute
+
+**Toggle FaceTime Mute** lives in the same script directory and flips FaceTime’s **Video → Mute** item for the active call. Assign it a hotkey in Raycast. It shows a short **FaceTime muted** / **FaceTime unmuted** confirmation, uses the same Accessibility and Automation access as **Toggle Dictation**, and exits nonzero if FaceTime is not running or mute is unavailable. Change its `@raycast.mode` to `silent` if you would rather have no confirmation.
