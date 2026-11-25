@@ -1,10 +1,8 @@
 function fish_prompt
-    set -l last_status $status
     set -l normal (set_color normal)
     set -l dim (set_color brblack)
     set -l blue (set_color blue)
     set -l cyan (set_color cyan)
-    set -l red (set_color red)
     set -l yellow (set_color yellow)
 
     set -l cwd $blue(basename $PWD)
@@ -18,13 +16,8 @@ function fish_prompt
         end
     end
 
-    set -l prompt_char "▲"
-    if test $last_status -ne 0
-        set prompt_char (set_color red)"❯"
-    end
-
     echo
     echo -n -s $cwd $git_info $normal
     echo
-    echo -n -s $prompt_char $normal " "
+    echo -n -s "▲" $normal " "
 end
